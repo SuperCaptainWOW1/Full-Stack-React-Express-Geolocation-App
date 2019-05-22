@@ -1,0 +1,13 @@
+input {
+  font-size: 20px;    
+  padding: 7px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  display: block;
+}
+
+.error {
+  color: #e53935;
+  padding-left: 8px;
+  font-size: 18px;
+}

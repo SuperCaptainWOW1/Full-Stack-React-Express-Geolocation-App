@@ -1,0 +1,23 @@
+.logo {
+  margin-bottom: 80px;
+}
+
+.logo__title {
+  font-size: 72px;
+  font-weight: 500;
+}
+
+img {
+  height: 70px;
+  position: relative;
+  top: 5px;
+}
+
+@media screen and (max-width: 552px) {
+  .logo__title {
+    font-size: 60px;
+  }
+  img {
+    height: 60px;
+  }
+}

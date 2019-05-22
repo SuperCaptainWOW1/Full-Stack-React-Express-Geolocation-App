@@ -1,0 +1,33 @@
+ul {
+  list-style: none;
+  line-height: 1.6em;
+  margin-bottom: 80px;
+}
+
+.item-content {
+  font-weight: 300;
+}
+
+@media screen and (min-width: 552px) {
+  ul {
+    font-size: 26px;
+  }
+  .padding-left {
+    padding-left: 155px;
+  }
+}
+
+@media screen and (max-width: 552px) {
+  ul {
+    font-size: 22px;
+  }
+  .padding-left {
+    padding-left: 130px;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .padding-left {
+    padding-left: 0;
+  }
+}
