@@ -9,8 +9,8 @@ function DataContainer(props) {
       <li>Region: <span className="item-content">{props.region}</span></li>
       <li>Zip Code: <span className="item-content">{props.zipCode}</span></li>
       <li>Time Zone: <span className="item-content">{props.timeZone}</span></li>
-      <li>Coordinates: latitude - <span className="item-content">{props.coordinates.latitude}</span></li>
-      <li className="padding-left">longitude - <span className="item-content">{props.coordinates.longitude}</span></li>
+      <li>Coordinates: latitude - <span className="item-content">{props.latitude}</span></li>
+      <li className="padding-left">longitude - <span className="item-content">{props.longitude}</span></li>
     </ul>
   )
 }
