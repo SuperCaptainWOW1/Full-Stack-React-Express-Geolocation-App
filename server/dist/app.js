@@ -17,7 +17,6 @@ app.get("/", (req, res) => {
         res.send(response);
     })
         .catch((err) => {
-        // tslint:disable-next-line:no-console
         console.log(err);
     });
 });
@@ -29,16 +28,12 @@ app.get("/:ip*", (req, res) => {
             res.send(response);
         })
             .catch((err) => {
-            // tslint:disable-next-line:no-console
             console.log(err);
         });
     }
 });
 const port = 8000;
 app.listen(port, () => {
-    // tslint:disable-next-line:no-console
     console.log("Listening...");
-    // tslint:disable-next-line:no-console
     console.log(`port ${port}`);
 });
-//# sourceMappingURL=index.js.map

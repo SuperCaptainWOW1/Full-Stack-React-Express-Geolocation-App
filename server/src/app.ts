@@ -1,5 +1,5 @@
-import express from "express";
-const app = express();
+import express, { Application, Request, Response } from "express";
+const app: Application = express();
 import cors from "cors";
 import request from "request-promise";
 
@@ -8,26 +8,24 @@ app.use(cors({
 }));
 
 // Get location of user
-app.get("/", (req, res) => {
+app.get("/", (req: Request, res: Response) => {
   request({ method: "GET", uri: "https://freegeoip.app/json/" })
     .then((response) => {
       res.send(response);
     })
     .catch((err) => {
-      // tslint:disable-next-line:no-console
       console.log(err);
     });
 });
 
 // Get location of custom ip
-app.get("/:ip*", (req, res) => {
+app.get("/:ip*", (req: Request, res: Response) => {
   if (req.params.ip + req.params[0] !== "favicon.ico") {
     request({ method: "GET", uri: `https://freegeoip.app/json/${req.params.ip + req.params[0]}` })
       .then((response) => {
         res.send(response);
       })
       .catch((err) => {
-        // tslint:disable-next-line:no-console
         console.log(err);
       });
   }
@@ -36,8 +34,6 @@ app.get("/:ip*", (req, res) => {
 const port: number = 8000;
 
 app.listen(port, () => {
-  // tslint:disable-next-line:no-console
   console.log("Listening...");
-  // tslint:disable-next-line:no-console
   console.log(`port ${port}`);
 });
